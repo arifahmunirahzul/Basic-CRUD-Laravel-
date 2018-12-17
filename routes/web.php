@@ -22,3 +22,6 @@ Route::get('/about-us', 'PageController@aboutUs')->name('aboutUs');
 Route::get('/user', 'UserController@viewUser')->name('viewUser');
 Route::get('/user-view', 'UserController@viewAddUser')->name('viewAddUser');
 Route::post('/user-add', 'UserController@addUser')->name('addUser');
+Route::get('user/view-edit/{id}', 'UserController@viewEditUser')->name('viewEditUser');
+Route::post('user/save-edit/{id}', 'UserController@editUser')->name('editUser');
+Route::delete('/user/delete/{id}','UserController@deleteUser')->name('deleteUser');
